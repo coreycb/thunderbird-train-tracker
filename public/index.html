@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Thunderbird Trains</title>
+  <link rel="icon" type="image/png" href="/images/TB-Logo-release.png" />
+  <link rel="stylesheet" href="/styles.css?v=20251007">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-inner">
+  <h1>What Thunderbird Train is it now?</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="channel-section">
+        <div class="section-header">
+          <h2>Desktop Trains</h2>
+        </div>
+        <div id="channel-strip" class="channel-strip">
+          <p class="loading">Loading…</p>
+        </div>
+      </section>
+
+      <section class="channel-section">
+        <div class="section-header">
+          <h2>Android Trains</h2>
+        </div>
+        <div id="android-strip" class="channel-strip">
+          <p class="loading">Loading…</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>Data sources:
+        <a href="https://product-details.mozilla.org/1.0/thunderbird_versions.json">product-details</a>,
+        <a href="https://calendar.google.com">public calendar</a>,
+        <a href="https://ftp.mozilla.org/pub/thunderbird-mobile/android/nightly/latest-main/">android nightly builds</a>,
+        <a href="https://github.com/thunderbird/thunderbird-android/tags">android tags</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <h2 id="modal-title">Milestones</h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    (function loadFreshApp() {
+      const script = document.createElement('script');
+      script.src = '/app.js?v=' + Date.now();
+      script.async = false;
+      document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

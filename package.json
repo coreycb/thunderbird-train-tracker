@@ -1,0 +1,22 @@
+{
+  "name": "thunderbird-train-tracker",
+  "version": "0.1.0",
+  "description": "Tracks Thunderbird release channels and milestone dates from Mozilla product-details and a public Google Calendar.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src --exec node src/server.js",
+    "test": "node test/smoke.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "Apache-2.0"
+}
